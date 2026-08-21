@@ -1,0 +1,158 @@
+/* ═══════════════════════════════════════════
+   Onam Theme — Minimal Kerala Harvest Style
+   ═══════════════════════════════════════════ */
+
+/* ── Colour overrides ── */
+:root {
+  --onam-gold:      #f5a623;
+  --onam-amber:     #e07b0f;
+  --onam-green:     #2d7a3b;
+  --onam-green-lt:  #4caf68;
+  --onam-cream:     #fffbf0;
+  --onam-red:       #c0392b;
+}
+
+/* ── Body background ── */
+body {
+  background: linear-gradient(160deg, #fffbf0 0%, #fef3d0 60%, #e8f5e9 100%);
+}
+
+/* ── Navbar gets a warm Kerala green ── */
+.gradient-nav {
+  background: linear-gradient(90deg, #1a3d2b 0%, #0f2418 100%) !important;
+}
+
+/* ── Hero section: sunset-harvest gradient ── */
+.hero-section {
+  background: linear-gradient(135deg, #b5470b 0%, #e07b0f 40%, #f5a623 100%) !important;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Decorative pookalam ring behind hero text */
+.hero-section::before {
+  content: '';
+  position: absolute;
+  width: 340px;
+  height: 340px;
+  border-radius: 50%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background:
+    radial-gradient(circle at 50% 0%,   #f5a623 0 10%, transparent 10%),
+    radial-gradient(circle at 85% 15%,  #c0392b 0 10%, transparent 10%),
+    radial-gradient(circle at 100% 50%, #2d7a3b 0 10%, transparent 10%),
+    radial-gradient(circle at 85% 85%,  #f5a623 0 10%, transparent 10%),
+    radial-gradient(circle at 50% 100%, #c0392b 0 10%, transparent 10%),
+    radial-gradient(circle at 15% 85%,  #2d7a3b 0 10%, transparent 10%),
+    radial-gradient(circle at 0%  50%,  #f5a623 0 10%, transparent 10%),
+    radial-gradient(circle at 15% 15%,  #c0392b 0 10%, transparent 10%);
+  opacity: 0.18;
+  pointer-events: none;
+  animation: chakra-spin 20s linear infinite;
+}
+
+/* Inner ring */
+.hero-section::after {
+  content: '';
+  position: absolute;
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background:
+    radial-gradient(circle at 50% 0%,   #fff 0 8%, transparent 8%),
+    radial-gradient(circle at 85% 15%,  #fff 0 8%, transparent 8%),
+    radial-gradient(circle at 100% 50%, #fff 0 8%, transparent 8%),
+    radial-gradient(circle at 85% 85%,  #fff 0 8%, transparent 8%),
+    radial-gradient(circle at 50% 100%, #fff 0 8%, transparent 8%),
+    radial-gradient(circle at 15% 85%,  #fff 0 8%, transparent 8%),
+    radial-gradient(circle at 0%  50%,  #fff 0 8%, transparent 8%),
+    radial-gradient(circle at 15% 15%,  #fff 0 8%, transparent 8%);
+  opacity: 0.12;
+  pointer-events: none;
+  animation: chakra-spin 20s linear infinite reverse;
+}
+
+@keyframes chakra-spin {
+  from { transform: translate(-50%, -50%) rotate(0deg);   }
+  to   { transform: translate(-50%, -50%) rotate(360deg); }
+}
+
+/* ── Onam greeting banner ── */
+.onam-banner {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  background: linear-gradient(90deg, rgba(255,255,255,0.12), rgba(255,255,255,0.22), rgba(255,255,255,0.12));
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  border-radius: 50px;
+  padding: 6px 20px;
+  margin-bottom: 1rem;
+  backdrop-filter: blur(4px);
+  animation: slideInDown 0.6s ease-out;
+}
+
+.onam-banner span {
+  font-size: 0.82rem;
+  font-weight: 600;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  color: #fff;
+  opacity: 0.95;
+}
+
+.onam-banner .onam-flower {
+  font-size: 1rem;
+  animation: bob 2.5s ease-in-out infinite;
+}
+
+@keyframes bob {
+  0%, 100% { transform: translateY(0);    }
+  50%       { transform: translateY(-3px); }
+}
+
+/* ── Pookalam strip above footer ── */
+.onam-pookalam-strip {
+  width: 100%;
+  text-align: center;
+  padding: 10px 0 4px;
+  font-size: 1.55rem;
+  letter-spacing: 4px;
+  line-height: 1;
+  color: var(--onam-gold);
+  pointer-events: none;
+  user-select: none;
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+/* ── Card accent: top bar becomes Onam tricolour ── */
+.card-item::before {
+  background: linear-gradient(90deg,
+    #f5a623 0%,
+    #c0392b 33%,
+    #2d7a3b 66%,
+    #f5a623 100%
+  ) !important;
+}
+
+/* ── Card hover: warm golden shadow ── */
+.card-item:hover .card-inner {
+  box-shadow: 0 20px 40px rgba(224, 123, 15, 0.18) !important;
+}
+
+/* ── Scrollbar tint ── */
+::-webkit-scrollbar-thumb {
+  background: var(--onam-gold);
+  border-radius: 6px;
+}
+
+/* ── Footer gets a deeper Kerala green ── */
+.footer-section {
+  background: #0f2418 !important;
+}
