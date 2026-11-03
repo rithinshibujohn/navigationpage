@@ -1,10 +1,11 @@
 /* ===== Footer Styles ===== */
 .footer-section {
-  background: linear-gradient(135deg, #1e293b 0%, #0f172a 100%);
-  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  background: linear-gradient(135deg, #0c1220 0%, #141d2a 40%, #1b243a 100%);
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
   margin-top: 4rem;
   position: relative;
   z-index: 10;
+  box-shadow: 0 -12px 28px rgba(15, 23, 42, 0.12);
 }
 
 .footer-section::before {
@@ -14,7 +15,7 @@
   left: 0;
   right: 0;
   height: 1px;
-  background: linear-gradient(90deg, transparent, #2563eb, transparent);
+  background: linear-gradient(90deg, transparent, #d9b46a, #f7f1e5, transparent);
 }
 
 /* ===== Footer Brand ===== */
@@ -71,12 +72,12 @@
   left: 0;
   width: 0;
   height: 2px;
-  background: linear-gradient(90deg, #2563eb, #f97316);
+  background: linear-gradient(90deg, #d9b46a, #f7f1e5);
   transition: width 0.35s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .footer-link:hover {
-  color: #2563eb !important;
+  color: #f7d9a0 !important;
   transform: translateX(4px);
 }
 
@@ -120,7 +121,7 @@
 }
 
 .footer-section .text-center .footer-link {
-  color: #2563eb !important;
+  color: #f7d9a0 !important;
 }
 
 /* ===== Responsive Footer ===== */

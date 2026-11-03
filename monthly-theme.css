@@ -1,0 +1,161 @@
+body[data-month] {
+  --month-primary: #2d66c3;
+  --month-deep: #142347;
+  --month-accent: #8bd3ff;
+  --month-tint: #eaf5ff;
+  --month-background: #f2f8ff;
+  background: linear-gradient(180deg, var(--month-background) 0%, #f8f9fb 72%);
+}
+
+body[data-month="february"] {
+  --month-primary: #ba3f68;
+  --month-deep: #421b35;
+  --month-accent: #f08eaa;
+  --month-tint: #fff0f4;
+  --month-background: #fff6f8;
+}
+
+body[data-month="march"] {
+  --month-primary: #187b67;
+  --month-deep: #103f3b;
+  --month-accent: #6fd4a8;
+  --month-tint: #eafff6;
+  --month-background: #f3fcf7;
+}
+
+body[data-month="april"] {
+  --month-primary: #8b5a24;
+  --month-deep: #382719;
+  --month-accent: #f1c56e;
+  --month-tint: #fff6df;
+  --month-background: #fff9ec;
+}
+
+body[data-month="may"] {
+  --month-primary: #cc6330;
+  --month-deep: #4c291f;
+  --month-accent: #ffbf69;
+  --month-tint: #fff2df;
+  --month-background: #fff8f1;
+}
+
+body[data-month="june"] {
+  --month-primary: #3e78a8;
+  --month-deep: #152d4b;
+  --month-accent: #75c9e8;
+  --month-tint: #e6f4fb;
+  --month-background: #f2f8fb;
+}
+
+body[data-month="july"] {
+  --month-primary: #277d83;
+  --month-deep: #14383e;
+  --month-accent: #64d1c5;
+  --month-tint: #e6f7f5;
+  --month-background: #f1fbfa;
+}
+
+body[data-month="august"] {
+  --month-primary: #4b66a8;
+  --month-deep: #20294e;
+  --month-accent: #a4b8ff;
+  --month-tint: #eef1ff;
+  --month-background: #f5f6ff;
+}
+
+body[data-month="september"] {
+  --month-primary: #39715a;
+  --month-deep: #1a3b33;
+  --month-accent: #8acb9e;
+  --month-tint: #ebf8ee;
+  --month-background: #f5fbf4;
+}
+
+body[data-month="october"] {
+  --month-primary: #ad632f;
+  --month-deep: #3f291c;
+  --month-accent: #e7a65a;
+  --month-tint: #fff2df;
+  --month-background: #fff8ef;
+}
+
+body[data-month="november"] {
+  --month-primary: #85663d;
+  --month-deep: #362a1c;
+  --month-accent: #dcc07b;
+  --month-tint: #faf3e3;
+  --month-background: #fcf8ef;
+}
+
+body[data-month="december"] {
+  --month-primary: #ad2438;
+  --month-deep: #3b1424;
+  --month-accent: #58a77b;
+  --month-tint: #fff0ed;
+  --month-background: #fff6f4;
+}
+
+body[data-month] .gradient-nav {
+  background: var(--month-deep) !important;
+}
+
+body[data-month] .nav-link::after {
+  background: var(--month-accent);
+}
+
+body[data-month] .dropdown-item:hover {
+  background: var(--month-primary);
+}
+
+body[data-month] .hero-section {
+  background:
+    radial-gradient(circle at top left, rgba(255, 255, 255, 0.2), transparent 30%),
+    linear-gradient(135deg, var(--month-deep), var(--month-primary) 58%, var(--month-accent)) !important;
+}
+
+body[data-month] .hero-section::after {
+  background: var(--month-accent);
+}
+
+.month-theme-label {
+  color: rgba(255, 255, 255, 0.88);
+  font-size: 0.85rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  position: relative;
+  z-index: 1;
+}
+
+body[data-month] .card-item::before {
+  background: linear-gradient(90deg, var(--month-deep), var(--month-primary), var(--month-accent));
+}
+
+body[data-month] .card-item:hover .card-inner {
+  border-color: var(--month-accent);
+  background: linear-gradient(135deg, #fff 0%, var(--month-tint) 100%);
+}
+
+body[data-month] .card-item:hover h3 {
+  color: var(--month-primary);
+}
+
+body[data-month] .footer-section {
+  background: linear-gradient(135deg, var(--month-deep), var(--month-primary)) !important;
+}
+
+body[data-month] .footer-section::before {
+  background: linear-gradient(90deg, transparent, var(--month-accent), transparent);
+}
+
+body[data-month] .footer-section h6::after {
+  background: linear-gradient(90deg, var(--month-accent), rgba(255, 255, 255, 0.85));
+}
+
+body[data-month] .footer-link::before {
+  background: var(--month-accent);
+}
+
+body[data-month] .footer-link:hover,
+body[data-month] .footer-section .text-center .footer-link {
+  color: var(--month-accent) !important;
+}
